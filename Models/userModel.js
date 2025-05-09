@@ -24,12 +24,7 @@ const userSchema = new Schema(
         ref: "cart",
       },
     ],
-    orders: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: "order",
-      },
-    ],
+    orders: [{ type: Schema.Types.ObjectId, ref: "Order" }],
     dp: {
       type: String,
     },

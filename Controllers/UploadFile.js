@@ -1,4 +1,4 @@
-const userModal = require("../Models/userModel");
+const UserModel = require("../Models/userModel");
 const app = require("../FireBase");
 const {
   getStorage,
@@ -18,7 +18,7 @@ const userDp = async (req, res) => {
   }
 
   try {
-    const user = await userModal.findOne({ _id: userId });
+    const user = await UserModel.findOne({ _id: userId });
 
     // Handle avatar upload
     if (avatarFile) {

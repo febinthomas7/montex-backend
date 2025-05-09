@@ -190,6 +190,9 @@ const login = async (req, res) => {
       name: user.name,
       _id: user._id,
       dp: user.dp,
+      joinDate: user.createdAt,
+      address: user.address,
+      phone: user.phone,
     });
   } catch (error) {
     res.status(500).json({ message: "Internal server error", sucess: false });
